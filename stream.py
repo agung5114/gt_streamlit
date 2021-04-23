@@ -12,23 +12,18 @@ import pandas as pd
 
 st.title('Streamlit sample app')
 st.write("Here's our first attempt at using data to create a table:")
-st.write(pd.DataFrame({
-    'first column': [1, 2, 3, 4],
-    'second column': [10, 20, 30, 40]
-}))
 
 df = pd.DataFrame({
   'first column': [1, 2, 3, 4],
   'second column': [10, 20, 30, 40]
 })
 
-df
-
 chart_data = pd.DataFrame(
      np.random.randn(20, 3),
      columns=['a', 'b', 'c'])
 
 st.line_chart(chart_data)
+df
 
 if st.checkbox('Show dataframe'):
     chart_data = pd.DataFrame(
